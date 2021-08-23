@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.14/Tone.js"
+        integrity="sha512-0R3O2W4t+1h8Jd3LumXXJrpHuY76WDdjE9he0D7Ra6J95lnvbdmZe+CTw5Bfe2p4CrYeC/dpgtJ33ztGUXKH4Q=="
+        crossorigin="anonymous"></script>
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Pipo</title>
+</head>
+
+<body>
+    <video autoplay playsinline muted id="webcam"></video>
+
+    <div class="control">
+
+        <div class="col onboarding show">
+            <div>
+                Point the camera to an illustration
+            </div>    
+            <button>got it</button>
+        </div>
+
+        <div class="col full-screen-center">
+
+            <!-- <div class="header"></div>
+            <div class="middle"></div> -->
+
+
+            <div class="quote-detection">fdvdfsvf</div>
+            <!-- <input class="quote-input" type="text" value="This is cool"> -->
+            <div class="col">
+                <!-- <div class="row">
+                    <button class="train-button">TRAIN</button>
+                    <button class="save-model">SAVE</button>
+                    <button class="neutralize">NEUTRALIZE</button>
+                </div> -->
+                <div class="instagram-link">
+                    👋 More on instagram
+                </div>
+            </div>
+
+            <div class="train-feedback"></div>
+        </div>
+
+
+    </div>
+
+</body>
+
+<script src="src/webcam.js"></script>
+<script src="src/script.js"></script>
+
+</html>
