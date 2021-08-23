@@ -85,10 +85,10 @@ async function app() {
     addExample(quotes.length + 1);
     quoteMapping[quotes.length + 1] = "";
   }
-  // trainButton.addEventListener("touchstart", keepTraining);
-  // trainButton.addEventListener("touchend", stopTraining);
-  trainButton.addEventListener("mousedown", keepTraining);
-  trainButton.addEventListener("mouseup", stopTraining);
+  trainButton.addEventListener("touchstart", keepTraining);
+  trainButton.addEventListener("touchend", stopTraining);
+  // trainButton.addEventListener("mousedown", keepTraining);
+  // trainButton.addEventListener("mouseup", stopTraining);
   
   neutralizeButton.addEventListener('click', neutralize);
   saveModelButton.addEventListener("click", saveWeights);
