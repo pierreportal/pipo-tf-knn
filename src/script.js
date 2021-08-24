@@ -8,7 +8,7 @@ const trainFeedback = document.querySelector('.train-feedback');
 const neutralizeButton = document.querySelector('.neutralize');
 const instagramLink = document.querySelector('.instagram-link');
 
-const TRAINING_STEPS_MAX = 10; // change to 10
+const TRAINING_STEPS_MAX = 20; // change to 10
 
 let trainingInterval;
 let isTraining = false;
@@ -28,17 +28,25 @@ const loadWeights = (src) => {
   classifier.setClassifierDataset(tensorObj);
 }
 
+function download(content, fileName, contentType) {
+  var a = document.createElement("a");
+  var file = new Blob([content], {type: contentType});
+  a.href = URL.createObjectURL(file);
+  a.download = fileName;
+  a.click();
+}
 
 const saveWeights = () => {
-    let dataset = classifier.getClassifierDataset()
-    var datasetObj = {}
-    Object.keys(dataset).forEach((key) => {
-      let data = dataset[key].dataSync();
-      datasetObj[key] = Array.from(data); 
-    });
-    let jsonStr = JSON.stringify(datasetObj)
+  let dataset = classifier.getClassifierDataset()
+  var datasetObj = {}
+  Object.keys(dataset).forEach((key) => {
+    let data = dataset[key].dataSync();
+    datasetObj[key] = Array.from(data); 
+  });
+  let jsonStr = JSON.stringify(datasetObj)
+  download(jsonStr, 'pipoKNjson.txt', 'text/plain');
 
-    console.log(jsonStr)
+  console.log(jsonStr)
     //can be change to other source
     // localStorage.setItem("myData", jsonStr);
 }

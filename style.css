@@ -24,10 +24,11 @@ body {
   justify-content: flex-end;
 }
 
-.control, .train-feedback {
+.control,
+.train-feedback {
   height: 100vh;
   width: 100vw;
-  overflow: hidden
+  overflow: hidden;
 }
 
 video {
@@ -40,46 +41,48 @@ video {
   object-fit: cover;
 }
 
-.quote-input, .quote-detection{
+.quote-input,
+.quote-detection {
   font-size: 20px;
   width: 80%;
   padding: 10px;
   text-align: center;
   background: none;
-  border:none;
+  border: none;
   outline: none;
   color: yellow;
-  text-shadow:
-    0px 1px 0 #000,
-    0px -1px 0 #000,
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: 0px 1px 0 #000, 0px -1px 0 #000, -1px -1px 0 #000,
+    1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
-.control, .train-feedback{
-  position: absolute
+.control,
+.train-feedback {
+  position: absolute;
 }
 
 .train-feedback {
-  transition: top ease .5s;
+  transition: top ease 0.5s;
   background-color: lightgreen;
   top: 100%;
-  opacity: 0.3
+  opacity: 0.3;
 }
 .instagram-link {
-  background-color: white;
+  background-color: black;
   margin-bottom: 50px;
-  border-radius: 5px;
-  padding: 0 5px;
-  opacity: .4;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 5px;
+  text-align: center;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
 }
 
 .quote-detection {
   margin-bottom: 200px;
   opacity: 0;
   transform: translateY(20%);
-  transition: opacity ease .4s, transform ease .4s;
+  transition: opacity ease 0.4s, transform ease 0.4s;
 }
 
 .quote-detection.show {
@@ -96,4 +99,12 @@ video {
   align-items: center;
   justify-content: center;
   z-index: 1;
+}
+
+button {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: none;
+  font-size: 10px;
 }
